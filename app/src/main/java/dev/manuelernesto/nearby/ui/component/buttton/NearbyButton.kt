@@ -1,4 +1,4 @@
-package dev.manuelernesto.nearby.ui.component
+package dev.manuelernesto.nearby.ui.component.buttton
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
