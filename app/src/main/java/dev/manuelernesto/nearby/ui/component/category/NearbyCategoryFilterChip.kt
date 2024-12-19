@@ -58,7 +58,7 @@ fun NearbyCategoryFilterChip(
             selectedContainerColor = GreenBase
         ),
         selected = isSelected,
-        onClick = { onClick(isSelected) },
+        onClick = { onClick(!isSelected) },
         label = {
             Text(
                 text = category.name,
