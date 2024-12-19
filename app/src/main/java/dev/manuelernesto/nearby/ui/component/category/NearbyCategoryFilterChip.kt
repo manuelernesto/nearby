@@ -78,8 +78,21 @@ private fun NearbyCategoryFilterChipPreview() {
             id = "1",
             name = "Pharmacy"
         ),
-        isSelected = true
-    ) {
+        isSelected = true,
+        onClick = {}
+    )
+}
 
-    }
+
+@Preview
+@Composable
+private fun NearbyCategoryFilterChipNotSelectedPreview() {
+    NearbyCategoryFilterChip(
+        category = NearbyCategory(
+            id = "1",
+            name = "Pharmacy"
+        ),
+        isSelected = false,
+        onClick = {}
+    )
 }
