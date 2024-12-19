@@ -64,6 +64,16 @@ private fun NearbyButtonPreview() {
 
 @Preview
 @Composable
+private fun NearbyButtonNoIconPreview() {
+    NearbyButton(
+        modifier = Modifier.fillMaxWidth(), text = "Confirm"
+    ) {
+
+    }
+}
+
+@Preview
+@Composable
 private fun NearbyButtonNoTextPreview() {
     NearbyButton(
         modifier = Modifier, iconRes = R.drawable.ic_arrow_left
