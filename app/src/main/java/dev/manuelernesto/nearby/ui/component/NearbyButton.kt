@@ -2,6 +2,7 @@ package dev.manuelernesto.nearby.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
@@ -31,6 +32,7 @@ fun NearbyButton(
     Button(
         modifier = modifier.heightIn(min = 56.dp),
         shape = RoundedCornerShape(16.dp),
+        contentPadding = if (text == null && iconRes != null) PaddingValues(0.dp) else ButtonDefaults.ContentPadding,
         colors = ButtonDefaults.buttonColors(
             containerColor = GreenBase
         ),
@@ -55,6 +57,16 @@ fun NearbyButton(
 private fun NearbyButtonPreview() {
     NearbyButton(
         modifier = Modifier.fillMaxWidth(), text = "Confirm", iconRes = R.drawable.ic_scan
+    ) {
+
+    }
+}
+
+@Preview
+@Composable
+private fun NearbyButtonNoTextPreview() {
+    NearbyButton(
+        modifier = Modifier, iconRes = R.drawable.ic_arrow_left
     ) {
 
     }
