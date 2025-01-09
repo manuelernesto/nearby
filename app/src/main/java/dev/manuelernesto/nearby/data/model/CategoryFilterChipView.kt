@@ -2,9 +2,9 @@ package dev.manuelernesto.nearby.data.model
 
 import androidx.annotation.DrawableRes
 import dev.manuelernesto.nearby.R
-import dev.manuelernesto.nearby.data.model.NearbyCategoryFilterChipView.entries
+import dev.manuelernesto.nearby.data.model.CategoryFilterChipView.entries
 
-enum class NearbyCategoryFilterChipView(
+enum class CategoryFilterChipView(
     val description: String,
     @DrawableRes val icon: Int
 ) {
@@ -18,7 +18,7 @@ enum class NearbyCategoryFilterChipView(
     BAKERY("Bakery", R.drawable.ic_bakery);
 
     companion object {
-        fun fromDescription(description: String): NearbyCategoryFilterChipView? {
+        fun fromDescription(description: String): CategoryFilterChipView? {
             return entries.find { it.description == description }
         }
     }

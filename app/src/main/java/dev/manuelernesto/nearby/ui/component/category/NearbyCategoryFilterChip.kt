@@ -13,7 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import dev.manuelernesto.nearby.data.model.NearbyCategory
+import dev.manuelernesto.nearby.data.model.Category
 import dev.manuelernesto.nearby.ui.theme.Gray300
 import dev.manuelernesto.nearby.ui.theme.Gray400
 import dev.manuelernesto.nearby.ui.theme.GreenBase
@@ -23,7 +23,7 @@ import dev.manuelernesto.nearby.ui.theme.Typography
 @Composable
 fun NearbyCategoryFilterChip(
     modifier: Modifier = Modifier,
-    category: NearbyCategory,
+    category: Category,
     isSelected: Boolean,
     onClick: (isSelected: Boolean) -> Unit
 ) {
@@ -74,7 +74,7 @@ fun NearbyCategoryFilterChip(
 @Composable
 private fun NearbyCategoryFilterChipPreview() {
     NearbyCategoryFilterChip(
-        category = NearbyCategory(
+        category = Category(
             id = "1",
             name = "Pharmacy"
         ),
@@ -88,7 +88,7 @@ private fun NearbyCategoryFilterChipPreview() {
 @Composable
 private fun NearbyCategoryFilterChipNotSelectedPreview() {
     NearbyCategoryFilterChip(
-        category = NearbyCategory(
+        category = Category(
             id = "1",
             name = "Pharmacy"
         ),

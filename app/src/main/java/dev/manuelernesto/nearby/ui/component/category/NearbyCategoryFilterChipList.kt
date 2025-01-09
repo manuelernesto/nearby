@@ -13,13 +13,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import dev.manuelernesto.nearby.data.model.NearbyCategory
+import dev.manuelernesto.nearby.data.model.Category
 
 @Composable
 fun NearbyCategoryFilterChipList(
     modifier: Modifier = Modifier,
-    categories: List<NearbyCategory>,
-    onSelectedCategoryChanged: (NearbyCategory) -> Unit
+    categories: List<Category>,
+    onSelectedCategoryChanged: (Category) -> Unit
 ) {
     var selectedCategoryId by remember { mutableStateOf(categories.firstOrNull()?.id.orEmpty()) }
 
@@ -53,14 +53,14 @@ private fun NearbyCategoryFilterChipListPreview() {
 
     NearbyCategoryFilterChipList(
         categories = listOf(
-            NearbyCategory("1", "Food"),
-            NearbyCategory("2", "Shopping"),
-            NearbyCategory("3", "Accommodation"),
-            NearbyCategory("4", "Supermarket"),
-            NearbyCategory("5", "Entertainment"),
-            NearbyCategory("6", "Pharmacy"),
-            NearbyCategory("7", "Fuel"),
-            NearbyCategory("8", "Bakery")
+            Category("1", "Food"),
+            Category("2", "Shopping"),
+            Category("3", "Accommodation"),
+            Category("4", "Supermarket"),
+            Category("5", "Entertainment"),
+            Category("6", "Pharmacy"),
+            Category("7", "Fuel"),
+            Category("8", "Bakery")
         ),
         onSelectedCategoryChanged = {}
     )
