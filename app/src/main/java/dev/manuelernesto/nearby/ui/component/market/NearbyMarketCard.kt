@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.manuelernesto.nearby.R
 import dev.manuelernesto.nearby.data.model.Market
+import dev.manuelernesto.nearby.data.model.mock.mockMarket
 import dev.manuelernesto.nearby.ui.theme.Gray100
 import dev.manuelernesto.nearby.ui.theme.Gray200
 import dev.manuelernesto.nearby.ui.theme.Gray400
@@ -111,19 +112,7 @@ fun NearbyMarketCard(
 @Composable
 private fun NearbyMarketCardPrev() {
     NearbyMarketCard(
-        market = Market(
-            id = "1",
-            categoryId = "1",
-            name = "Market",
-            description = "Market Description Market DescriptionMarket DescriptionMarket DescriptionMarket DescriptionMarket DescriptionMarket DescriptionMarket Description",
-            address = "Address",
-            coupons = 20,
-            latitude = -1.0,
-            longitude = 5.0,
-            cover = "https://www.google.com",
-            phone = ""
-
-        )
+        market = mockMarket
     ) {
 
     }
